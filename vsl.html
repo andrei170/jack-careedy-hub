@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VSL Outline - Jack Careedy | AG1 Consulting</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#070605;--card:#0e0d0c;--border:#1a1917;
+  --gold:#c9973a;--gold-bright:#e2b96a;--gold-glow:rgba(201,151,58,0.15);
+  --teal:#477e8b;
+  --text:#e8e4dd;--text-muted:#9a958d;
+  --max-w:720px;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);
+  line-height:1.7;
+  background-image:radial-gradient(circle,rgba(201,151,58,0.04) 1px,transparent 1px);
+  background-size:24px 24px;
+}
+.nav{position:sticky;top:0;z-index:100;backdrop-filter:blur(16px);background:rgba(7,6,5,0.85);border-bottom:1px solid var(--border);padding:16px 24px}
+.nav-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.nav-brand{font-weight:700;font-size:1rem;color:var(--gold);letter-spacing:0.5px}
+.nav-link{color:var(--text-muted);text-decoration:none;font-size:0.85rem;font-weight:500;transition:color 0.2s}
+.nav-link:hover{color:var(--gold)}
+
+.container{max-width:var(--max-w);margin:0 auto;padding:64px 24px 48px}
+.page-label{font-size:0.7rem;text-transform:uppercase;letter-spacing:2px;color:var(--gold);font-weight:600;margin-bottom:8px}
+.page-title{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:800;margin-bottom:8px}
+.page-subtitle{color:var(--text-muted);font-size:1rem;margin-bottom:48px}
+
+.vsl-card{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:8px;padding:28px 24px;margin-bottom:16px}
+.vsl-header{display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.vsl-title{font-size:1.1rem;font-weight:700;color:var(--text)}
+.timestamp-badge{display:inline-block;padding:4px 12px;border-radius:100px;font-size:0.65rem;font-weight:700;letter-spacing:0.5px;background:rgba(71,126,139,0.15);color:var(--teal);border:1px solid rgba(71,126,139,0.3)}
+.vsl-body{color:var(--text-muted);font-size:0.92rem;line-height:1.8}
+.vsl-body p{margin-bottom:12px}
+
+.footer{max-width:var(--max-w);margin:0 auto;padding:32px 24px;border-top:1px solid var(--border);text-align:center}
+.footer p{color:var(--text-muted);font-size:0.78rem}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand">AG1 Consulting</div>
+    <a href="./" class="nav-link">Back to Hub</a>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="reveal">
+    <div class="page-label">Deliverable 5</div>
+    <h1 class="page-title">VSL Outline</h1>
+    <p class="page-subtitle">A 6-section Video Sales Letter framework with timestamps, designed for a dedicated sales funnel.</p>
+  </div>
+
+  <div class="vsl-card reveal">
+    <div class="vsl-header">
+      <span class="timestamp-badge">0:00 - 0:30</span>
+      <div class="vsl-title">Section 1: Hook / Attention</div>
+    </div>
+    <div class="vsl-body">
+      <p>"If you are a filmmaker or videographer and you feel like you are constantly undercharging for work you know is worth 5 to 10 times what you are getting paid, what I am about to share is the system that changed everything for me. I went from shooting whatever came my way to building a studio, a team, and a community of over 1,000 filmmakers who are all learning how to do the same thing."</p>
+    </div>
+  </div>
+
+  <div class="vsl-card reveal">
+    <div class="vsl-header">
+      <span class="timestamp-badge">0:30 - 2:00</span>
+      <div class="vsl-title">Section 2: Problem / Agitation</div>
+    </div>
+    <div class="vsl-body">
+      <p>You are talented. Your work is good. Maybe even great. But every month is the same cycle. Finish a project, get paid, start from zero hunting for the next one. No pipeline. No retainers. No system.</p>
+      <p>You watch other filmmakers on Instagram charging $10K+ and you wonder what they know that you do not. So you update your reel. You buy new gear. You lower your price to win the bid. And the cycle continues.</p>
+      <p>The problem is not your skill. It is your system.</p>
+    </div>
+  </div>
+
+  <div class="vsl-card reveal">
+    <div class="vsl-header">
+      <span class="timestamp-badge">2:00 - 3:30</span>
+      <div class="vsl-title">Section 3: Solution Introduction</div>
+    </div>
+    <div class="vsl-body">
+      <p>The Modern Filmmaker Blueprint is a system for positioning yourself as a premium creative partner, not just another videographer. Instead of competing on price, you learn how to pitch in a way that makes the client see you as an investment, not an expense.</p>
+      <p>The 3 Day Pitch Pack framework teaches you how to build a pitch that communicates value before you ever show your reel. When the pitch is right, the price takes care of itself.</p>
+    </div>
+  </div>
+
+  <div class="vsl-card reveal">
+    <div class="vsl-header">
+      <span class="timestamp-badge">3:30 - 4:30</span>
+      <div class="vsl-title">Section 4: Credibility</div>
+    </div>
+    <div class="vsl-body">
+      <p>I started shooting professionally at 17. Traveled 20+ countries. Built PhotoBomb Media from scratch. Now I teach 1,000+ filmmakers every week through The Modern Filmmaker Blueprint newsletter.</p>
+      <p>These are real filmmakers who are landing higher-paying clients, building retainers, and turning their cameras into real businesses.</p>
+    </div>
+  </div>
+
+  <div class="vsl-card reveal">
+    <div class="vsl-header">
+      <span class="timestamp-badge">4:30 - 5:30</span>
+      <div class="vsl-title">Section 5: Offer Overview</div>
+    </div>
+    <div class="vsl-body">
+      <p>The full system includes:</p>
+      <p>How to find and qualify high-ticket clients. How to build a pitch that commands premium pricing. How to structure retainer deals so you stop starting from zero every month. How to position your brand so clients come to you. And how to build a pipeline that keeps projects flowing without constant hustle.</p>
+    </div>
+  </div>
+
+  <div class="vsl-card reveal">
+    <div class="vsl-header">
+      <span class="timestamp-badge">5:30 - 6:00</span>
+      <div class="vsl-title">Section 6: CTA</div>
+    </div>
+    <div class="vsl-body">
+      <p>Join 1,000+ filmmakers who are already getting the playbook. Subscribe to The Modern Filmmaker Blueprint. It is free, it is weekly, and it is the system I wish someone had given me when I was starting out. Click the link below.</p>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <p>2026 AG1 Consulting Ltd.</p>
+</footer>
+
+<script>
+const observer=new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}
+  });
+},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>

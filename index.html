@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jack Careedy - Custom Marketing Package | AG1 Consulting</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#070605;--card:#0e0d0c;--border:#1a1917;
+  --gold:#c9973a;--gold-bright:#e2b96a;--gold-glow:rgba(201,151,58,0.15);
+  --teal:#477e8b;
+  --text:#e8e4dd;--text-muted:#9a958d;
+  --max-w:880px;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);
+  line-height:1.7;min-height:100vh;
+  background-image:radial-gradient(circle,rgba(201,151,58,0.04) 1px,transparent 1px);
+  background-size:24px 24px;
+}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:100;backdrop-filter:blur(16px);background:rgba(7,6,5,0.85);border-bottom:1px solid var(--border);padding:16px 24px}
+.nav-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.nav-brand{font-weight:700;font-size:1rem;color:var(--gold);letter-spacing:0.5px}
+
+/* HERO */
+.hero{max-width:var(--max-w);margin:0 auto;padding:80px 24px 48px;text-align:center}
+.pills{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:32px}
+.pill{padding:6px 16px;border-radius:100px;font-size:0.75rem;font-weight:600;letter-spacing:0.5px;text-transform:uppercase}
+.pill--gold{background:var(--gold-glow);color:var(--gold);border:1px solid rgba(201,151,58,0.3)}
+.pill--teal{background:rgba(71,126,139,0.15);color:var(--teal);border:1px solid rgba(71,126,139,0.3)}
+.hero h1{font-size:clamp(1.8rem,5vw,2.8rem);font-weight:800;line-height:1.2;margin-bottom:16px;color:var(--text)}
+.hero h1 span{color:var(--gold-bright)}
+.hero p{color:var(--text-muted);font-size:1.05rem;max-width:600px;margin:0 auto}
+
+/* STATS BAR */
+.stats{max-width:var(--max-w);margin:0 auto;padding:0 24px 56px}
+.stats-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border-radius:12px;overflow:hidden}
+.stat{background:var(--card);padding:24px 16px;text-align:center}
+.stat-num{font-size:clamp(1.4rem,3vw,2rem);font-weight:800;color:var(--gold-bright);display:block}
+.stat-label{font-size:0.78rem;color:var(--text-muted);margin-top:4px;display:block}
+@media(max-width:600px){.stats-inner{grid-template-columns:repeat(2,1fr)}}
+
+/* DELIVERABLES */
+.section{max-width:var(--max-w);margin:0 auto;padding:0 24px 64px}
+.section-label{font-size:0.7rem;text-transform:uppercase;letter-spacing:2px;color:var(--gold);font-weight:600;margin-bottom:8px}
+.section-title{font-size:1.6rem;font-weight:700;margin-bottom:32px}
+
+.accordion{display:flex;flex-direction:column;gap:12px}
+.accordion-item{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:8px;overflow:hidden;transition:border-color 0.3s}
+.accordion-item:hover{border-color:rgba(201,151,58,0.4)}
+.accordion-header{display:flex;align-items:center;gap:16px;padding:20px 24px;cursor:pointer;user-select:none}
+.accordion-num{width:32px;height:32px;border-radius:50%;background:var(--gold-glow);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:700;flex-shrink:0}
+.accordion-title{font-weight:600;font-size:1rem;flex:1}
+.accordion-badge{padding:3px 10px;border-radius:100px;font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px}
+.badge-live{background:rgba(34,197,94,0.15);color:#22c55e;border:1px solid rgba(34,197,94,0.3)}
+.accordion-chevron{color:var(--text-muted);transition:transform 0.3s;flex-shrink:0;font-size:1.2rem}
+.accordion-item.open .accordion-chevron{transform:rotate(180deg)}
+.accordion-body{max-height:0;overflow:hidden;transition:max-height 0.4s ease}
+.accordion-item.open .accordion-body{max-height:300px}
+.accordion-content{padding:0 24px 20px 72px;color:var(--text-muted);font-size:0.92rem;line-height:1.7}
+.accordion-content a{color:var(--gold);text-decoration:none;font-weight:500;border-bottom:1px solid rgba(201,151,58,0.3);transition:border-color 0.2s}
+.accordion-content a:hover{border-color:var(--gold)}
+
+/* PROCESS */
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:700px){.process-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:400px){.process-grid{grid-template-columns:1fr}}
+.process-card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:24px 20px;text-align:center}
+.process-step{font-size:0.65rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold);font-weight:600;margin-bottom:8px}
+.process-name{font-weight:700;font-size:1rem;margin-bottom:6px}
+.process-desc{font-size:0.82rem;color:var(--text-muted);line-height:1.5}
+
+/* CTA */
+.cta-section{max-width:var(--max-w);margin:0 auto;padding:0 24px 64px}
+.cta-box{background:linear-gradient(135deg,rgba(201,151,58,0.08),rgba(201,151,58,0.02));border:1px solid rgba(201,151,58,0.2);border-radius:12px;padding:48px 32px;text-align:center}
+.cta-box h2{font-size:1.5rem;font-weight:700;margin-bottom:12px}
+.cta-box p{color:var(--text-muted);margin-bottom:24px;font-size:0.95rem}
+.cta-btn{display:inline-block;padding:14px 36px;background:var(--gold);color:#070605;font-weight:700;font-size:0.95rem;border-radius:8px;text-decoration:none;transition:background 0.2s,transform 0.2s}
+.cta-btn:hover{background:var(--gold-bright);transform:translateY(-1px)}
+
+/* NOTE */
+.note{max-width:var(--max-w);margin:0 auto;padding:0 24px 32px;text-align:center}
+.note p{color:var(--text-muted);font-size:0.88rem;line-height:1.7}
+
+/* FOOTER */
+.footer{max-width:var(--max-w);margin:0 auto;padding:32px 24px;border-top:1px solid var(--border);text-align:center}
+.footer p{color:var(--text-muted);font-size:0.78rem}
+
+/* SCROLL REVEAL */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand">AG1 Consulting</div>
+  </div>
+</nav>
+
+<section class="hero reveal">
+  <div class="pills">
+    <span class="pill pill--gold">AG1 Consulting</span>
+    <span class="pill pill--teal">Modern Filmmaker</span>
+  </div>
+  <h1>Built Exclusively for <span>Jack Careedy</span></h1>
+  <p>A complete marketing package designed from 8+ hours of research into your business, audience, and positioning.</p>
+</section>
+
+<section class="stats reveal">
+  <div class="stats-inner">
+    <div class="stat">
+      <span class="stat-num" data-target="8">0</span>
+      <span class="stat-label">Hours of Research</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num" data-target="6">0</span>
+      <span class="stat-label">Custom Deliverables</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num" data-target="2">0</span>
+      <span class="stat-label">Live Pages</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num" data-target="10">0</span>
+      <span class="stat-label">Email Sequences</span>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal">
+  <div class="section-label">Your Package</div>
+  <h2 class="section-title">Custom Deliverables</h2>
+  <div class="accordion">
+
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <div class="accordion-num">1</div>
+        <div class="accordion-title">Research Snapshot</div>
+        <span class="accordion-chevron">&#9662;</span>
+      </div>
+      <div class="accordion-body">
+        <div class="accordion-content">
+          Deep-dive analysis of your business, brand identity, public presence, and 5 specific bottlenecks holding back revenue. Includes stakeholder mapping and strategic recommendations.
+          <br><br><a href="./research.html">View Full Research &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <div class="accordion-num">2</div>
+        <div class="accordion-title">Campaign Angles</div>
+        <span class="accordion-chevron">&#9662;</span>
+      </div>
+      <div class="accordion-body">
+        <div class="accordion-content">
+          5 campaign angles with headlines and hooks written in your voice. Each angle targets a different pain point and desire state for your filmmaker audience.
+          <br><br><a href="./angles.html">View Campaign Angles &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <div class="accordion-num">3</div>
+        <div class="accordion-title">Ad Script Concepts</div>
+        <span class="accordion-chevron">&#9662;</span>
+      </div>
+      <div class="accordion-body">
+        <div class="accordion-content">
+          3 ready-to-film ad scripts: direct response, proof-led, and educational/value-first. Each includes hook, body, and CTA structured for social media.
+          <br><br><a href="./angles.html#scripts">View Ad Scripts &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <div class="accordion-num">4</div>
+        <div class="accordion-title">Custom Landing Page</div>
+        <span class="badge-live accordion-badge">LIVE</span>
+        <span class="accordion-chevron">&#9662;</span>
+      </div>
+      <div class="accordion-body">
+        <div class="accordion-content">
+          A fully deployed landing page built in your brand style. Premium dark aesthetic with teal accents, designed to convert newsletter subscribers into coaching clients.
+          <br><br><a href="#">View Live Landing Page &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <div class="accordion-num">5</div>
+        <div class="accordion-title">VSL Outline</div>
+        <span class="accordion-chevron">&#9662;</span>
+      </div>
+      <div class="accordion-body">
+        <div class="accordion-content">
+          A 6-section Video Sales Letter outline with timestamps, covering hook, problem agitation, solution introduction, credibility, offer overview, and call to action.
+          <br><br><a href="./vsl.html">View VSL Outline &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <div class="accordion-num">6</div>
+        <div class="accordion-title">10-Email Outreach Sequence</div>
+        <span class="accordion-chevron">&#9662;</span>
+      </div>
+      <div class="accordion-body">
+        <div class="accordion-content">
+          A complete 10-email nurture sequence spanning 37 days. Includes value drops, insight emails, social proof, direct asks, and re-engagement touchpoints.
+          <br><br><a href="./emails.html">View Email Sequence &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section reveal">
+  <div class="section-label">How It Was Built</div>
+  <h2 class="section-title">The Process</h2>
+  <div class="process-grid">
+    <div class="process-card">
+      <div class="process-step">Step 1</div>
+      <div class="process-name">Research</div>
+      <div class="process-desc">Deep dive into your business, audience, competitors, and positioning gaps.</div>
+    </div>
+    <div class="process-card">
+      <div class="process-step">Step 2</div>
+      <div class="process-name">Strategy</div>
+      <div class="process-desc">Campaign angles, copy strategy, and funnel architecture tailored to your niche.</div>
+    </div>
+    <div class="process-card">
+      <div class="process-step">Step 3</div>
+      <div class="process-name">Build</div>
+      <div class="process-desc">Ad scripts, VSL outline, email sequences, and a live landing page created from scratch.</div>
+    </div>
+    <div class="process-card">
+      <div class="process-step">Step 4</div>
+      <div class="process-name">Deliver</div>
+      <div class="process-desc">Everything packaged, deployed, and ready for you to review and implement.</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section reveal">
+  <div class="cta-box">
+    <h2>Ready to Implement This?</h2>
+    <p>Everything above was built specifically for your business. If you want to talk about putting it into action, let's connect.</p>
+    <a href="https://calendly.com/ag-copy/call-with-andrei" class="cta-btn">Book a Quick Call with Andrei</a>
+  </div>
+</section>
+
+<div class="note reveal">
+  <p>AG1 Consulting builds full-stack marketing for coaches, creators, and info product owners. One operator. One point of contact. Everything from research to revenue.</p>
+</div>
+
+<footer class="footer">
+  <p>2026 AG1 Consulting Ltd. Built by Andrei Givero.</p>
+</footer>
+
+<script>
+function toggleAccordion(header){
+  const item=header.parentElement;
+  const wasOpen=item.classList.contains('open');
+  document.querySelectorAll('.accordion-item').forEach(i=>i.classList.remove('open'));
+  if(!wasOpen)item.classList.add('open');
+}
+
+// Count-up animation
+function animateCounters(){
+  document.querySelectorAll('.stat-num[data-target]').forEach(el=>{
+    const target=parseInt(el.dataset.target);
+    let current=0;
+    const duration=1200;
+    const step=Math.max(1,Math.floor(target/30));
+    const interval=duration/Math.ceil(target/step);
+    const timer=setInterval(()=>{
+      current+=step;
+      if(current>=target){current=target;clearInterval(timer)}
+      el.textContent=current;
+    },interval);
+  });
+}
+
+// Scroll reveal
+const revealObserver=new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+},{threshold:0.1});
+
+document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
+
+// Trigger counters when stats section is visible
+const statsObserver=new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      animateCounters();
+      statsObserver.unobserve(entry.target);
+    }
+  });
+},{threshold:0.3});
+const statsEl=document.querySelector('.stats');
+if(statsEl)statsObserver.observe(statsEl);
+</script>
+
+</body>
+</html>
