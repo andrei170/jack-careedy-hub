@@ -3,280 +3,204 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>10-Email Outreach Sequence - Jack Careedy | AG1 Consulting</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<title>10-Email Nurture Sequence - Jack Careedy</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --bg:#070605;--card:#0e0d0c;--border:#1a1917;
-  --gold:#c9973a;--gold-bright:#e2b96a;--gold-glow:rgba(201,151,58,0.15);
-  --teal:#477e8b;
-  --text:#e8e4dd;--text-muted:#9a958d;
-  --max-w:720px;
-}
-html{scroll-behavior:smooth}
-body{
-  font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);
-  line-height:1.7;
-  background-image:radial-gradient(circle,rgba(201,151,58,0.04) 1px,transparent 1px);
-  background-size:24px 24px;
-}
-.nav{position:sticky;top:0;z-index:100;backdrop-filter:blur(16px);background:rgba(7,6,5,0.85);border-bottom:1px solid var(--border);padding:16px 24px}
-.nav-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between}
-.nav-brand{font-weight:700;font-size:1rem;color:var(--gold);letter-spacing:0.5px}
-.nav-link{color:var(--text-muted);text-decoration:none;font-size:0.85rem;font-weight:500;transition:color 0.2s}
-.nav-link:hover{color:var(--gold)}
-
-.container{max-width:var(--max-w);margin:0 auto;padding:64px 24px 48px}
-.page-label{font-size:0.7rem;text-transform:uppercase;letter-spacing:2px;color:var(--gold);font-weight:600;margin-bottom:8px}
-.page-title{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:800;margin-bottom:8px}
-.page-subtitle{color:var(--text-muted);font-size:1rem;margin-bottom:48px}
-
-.email-card{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:8px;padding:28px 24px;margin-bottom:20px}
-.email-meta{display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap}
-.badge{display:inline-block;padding:4px 12px;border-radius:100px;font-size:0.65rem;font-weight:700;letter-spacing:0.5px}
-.badge-day{background:rgba(71,126,139,0.15);color:var(--teal);border:1px solid rgba(71,126,139,0.3)}
-.badge-type{background:var(--gold-glow);color:var(--gold);border:1px solid rgba(201,151,58,0.3)}
-.email-subject{font-size:1.1rem;font-weight:700;color:var(--gold-bright);margin-bottom:16px;line-height:1.4}
-.email-body{color:var(--text-muted);font-size:0.9rem;line-height:1.8}
-.email-body p{margin-bottom:12px}
-.email-body ul{padding-left:20px;margin-bottom:12px}
-.email-body li{margin-bottom:4px}
-.email-body a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,151,58,0.3)}
-.email-body a:hover{border-color:var(--gold)}
-.email-signoff{color:var(--text);font-weight:500;margin-top:8px}
-
-.footer{max-width:var(--max-w);margin:0 auto;padding:32px 24px;border-top:1px solid var(--border);text-align:center}
-.footer p{color:var(--text-muted);font-size:0.78rem}
-
-.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease}
+body{background:#070605;color:rgba(255,255,255,0.6);font-family:'Inter',sans-serif;font-size:15px;line-height:1.7;background-image:radial-gradient(rgba(255,255,255,0.015) 1px,transparent 1px);background-size:24px 24px}
+nav{position:sticky;top:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:16px 32px;background:rgba(7,6,5,0.9);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,151,58,0.1)}
+.nav-brand{font-weight:700;font-size:14px;color:#c9973a;letter-spacing:0.5px}
+.nav-back{font-size:13px;color:rgba(255,255,255,0.4);text-decoration:none}
+.nav-back:hover{color:#e2b96a}
+.container{max-width:720px;margin:0 auto;padding:48px 24px 80px}
+h1{font-size:clamp(28px,4vw,38px);font-weight:800;color:#fff;margin-bottom:8px;letter-spacing:-0.5px}
+.subtitle{font-size:15px;color:rgba(255,255,255,0.5);margin-bottom:48px}
+.note-box{background:rgba(201,151,58,0.06);border:1px solid rgba(201,151,58,0.15);border-radius:10px;padding:18px 22px;margin-bottom:40px;font-size:13px;color:rgba(255,255,255,0.5);line-height:1.6}
+.note-box strong{color:#e2b96a}
+.email-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-left:3px solid #c9973a;border-radius:12px;padding:28px;margin-bottom:16px;position:relative;overflow:hidden;transition:transform 0.3s,background 0.3s}
+.email-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,151,58,0.12),transparent)}
+.email-card:hover{transform:translateY(-2px);background:rgba(255,255,255,0.05)}
+.email-meta{display:flex;gap:10px;margin-bottom:14px;flex-wrap:wrap}
+.badge{padding:4px 12px;border-radius:100px;font-size:11px;font-weight:700;letter-spacing:0.5px}
+.badge-day{background:rgba(71,126,139,0.12);color:#5fa3b3}
+.badge-type{background:rgba(201,151,58,0.1);color:#e2b96a}
+.email-subject{font-size:17px;font-weight:700;color:#fff;margin-bottom:14px}
+.email-body p{margin-bottom:12px;font-size:14px;line-height:1.7}
+.email-body p:last-child{margin-bottom:0}
+.sig{color:rgba(255,255,255,0.3);font-size:13px;margin-top:14px}
+footer{border-top:1px solid rgba(255,255,255,0.07);text-align:center;padding:28px;font-size:12px;color:rgba(255,255,255,0.3)}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity 0.5s,transform 0.5s}
 .reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:600px){.container{padding:32px 16px 60px}nav{padding:14px 16px}.email-card{padding:20px}}
 </style>
 </head>
 <body>
-
-<nav class="nav">
-  <div class="nav-inner">
-    <div class="nav-brand">AG1 Consulting</div>
-    <a href="./" class="nav-link">Back to Hub</a>
-  </div>
+<nav>
+<div class="nav-brand">AG1 Consulting</div>
+<a href="./" class="nav-back">Back to Hub</a>
 </nav>
-
 <div class="container">
+<h1>10-Email Nurture Sequence</h1>
+<p class="subtitle">Ready-to-use emails for your audience. Send these to new newsletter subscribers automatically.</p>
 
-  <div class="reveal">
-    <div class="page-label">Deliverable 6</div>
-    <h1 class="page-title">10-Email Outreach Sequence</h1>
-    <p class="page-subtitle">A 37-day nurture sequence with value drops, insight emails, social proof, and strategic touchpoints.</p>
-  </div>
+<div class="note-box"><strong>How to use:</strong> This is a 25-day automated welcome sequence triggered when someone subscribes to The Modern Filmmaker Blueprint. Load these into Kit (ConvertKit) with the day delays shown. Each email builds on the last, moving the reader from new subscriber to paying client. Your weekly newsletter takes over after Email 10.</div>
 
-  <!-- EMAIL 1 -->
-  <div class="email-card reveal">
-    <div class="email-meta">
-      <span class="badge badge-day">Day 1</span>
-      <span class="badge badge-type">Value Drop</span>
-    </div>
-    <div class="email-subject">I built something for your business, Jack</div>
-    <div class="email-body">
-      <p>Hey Jack,</p>
-      <p>I am Andrei from AG1 Consulting. I spent the last several hours researching your business, your newsletter, your content, and your positioning.</p>
-      <p>Then I built you a complete marketing package. For free.</p>
-      <p>It includes:</p>
-      <ul>
-        <li>A research snapshot with 5 specific gaps I found in your current marketing</li>
-        <li>5 campaign angles with headlines and hooks written in your voice</li>
-        <li>3 ad scripts ready to film</li>
-        <li>A VSL outline for a dedicated sales funnel</li>
-        <li>A live landing page deployed and ready to use</li>
-        <li>A 10-email nurture sequence framework</li>
-      </ul>
-      <p>Everything is packaged on one page: <a href="./">View Package</a></p>
-      <p>This is yours whether we ever talk or not. No strings. I just wanted to show you what is possible when someone takes the time to actually understand your business before saying anything.</p>
-      <p class="email-signoff">- Andrei</p>
-    </div>
-  </div>
-
-  <!-- EMAIL 2 -->
-  <div class="email-card reveal">
-    <div class="email-meta">
-      <span class="badge badge-day">Day 3</span>
-      <span class="badge badge-type">Insight Expansion</span>
-    </div>
-    <div class="email-subject">The gap Soowei probably did not cover</div>
-    <div class="email-body">
-      <p>Hey Jack,</p>
-      <p>When I was researching your business, one thing stood out more than everything else.</p>
-      <p>You have 1,000+ filmmakers on your newsletter list. Every week, they open your email because they trust you. That is a warm audience most people would pay thousands to build.</p>
-      <p>But after they read the newsletter, what happens? There is no automated nurture sequence. No upsell to a paid offer. No application funnel. No VSL. They read, they close the email, and they wait until next week.</p>
-      <p>That means every subscriber who is ready to pay you right now has no way to do it beyond the 3 Day Pitch Pack. There is no $2K-$5K coaching offer. There is no $997 course. There is no strategy call booking page.</p>
-      <p>You are giving away premium-level content for free every single week and leaving the revenue on the table. Not because the content is not good enough. It is. The system to convert it is just not there yet.</p>
-      <p>I built a framework for what that conversion system could look like. It is in the package: <a href="./">View Package</a></p>
-      <p class="email-signoff">- Andrei</p>
-    </div>
-  </div>
-
-  <!-- EMAIL 3 -->
-  <div class="email-card reveal">
-    <div class="email-meta">
-      <span class="badge badge-day">Day 5</span>
-      <span class="badge badge-type">Social Proof</span>
-    </div>
-    <div class="email-subject">How a creator with 180K followers went from zero offers to a full funnel in weeks</div>
-    <div class="email-body">
-      <p>Hey Jack,</p>
-      <p>I work with coaches, creators, and info product owners. Full-stack marketing. Funnels, copy, VSLs, email, tech. Everything.</p>
-      <p>One of my clients had 180K followers on Instagram, a massive community, and zero marketing infrastructure. No funnel. No offer structure. No email automation. The coaching product existed in concept only.</p>
-      <p>I built the entire system from scratch. Offer architecture, VSL funnel, landing pages, email and SMS sequences, automations, community platform, payment infrastructure. I even hired and managed two VAs and served as the closer on every webinar launch.</p>
-      <p>The first live webinar had 150+ attendees. We rebuilt the funnel three times as the offer evolved. The full system was operational within weeks.</p>
-      <p>Your situation is similar. You have the audience. You have the trust. You have the content. What is missing is the system to convert attention into revenue at scale.</p>
-      <p>Everything I built for you is here: <a href="./">View Package</a></p>
-      <p class="email-signoff">- Andrei</p>
-    </div>
-  </div>
-
-  <!-- EMAIL 4 -->
-  <div class="email-card reveal">
-    <div class="email-meta">
-      <span class="badge badge-day">Day 8</span>
-      <span class="badge badge-type">Additional Value</span>
-    </div>
-    <div class="email-subject">One thing filmmakers get wrong about pricing</div>
-    <div class="email-body">
-      <p>Hey Jack,</p>
-      <p>Most filmmakers think the way to charge more is to get better at filmmaking. Upgrade the gear. Shoot a better reel. Add more to the portfolio.</p>
-      <p>It does not work that way. The filmmakers charging $10K+ per project are not necessarily more talented. They just have a system for communicating premium value before the client sees a single frame.</p>
-      <p>You already know this. Your 3 Day Pitch Pack is built on this exact principle. The pitch changes the price.</p>
-      <p>Where the opportunity gets bigger is when that principle is applied to your entire marketing system. Not just how you pitch individual clients, but how your funnel, your emails, your landing page, and your content all communicate premium value automatically, without you being in the room.</p>
-      <p>That is what I do. I build the system that makes the pitch work at scale.</p>
-      <p>Package is still here: <a href="./">View Package</a></p>
-      <p class="email-signoff">- Andrei</p>
-    </div>
-  </div>
-
-  <!-- EMAIL 5 -->
-  <div class="email-card reveal">
-    <div class="email-meta">
-      <span class="badge badge-day">Day 11</span>
-      <span class="badge badge-type">Direct Ask</span>
-    </div>
-    <div class="email-subject">15 minutes?</div>
-    <div class="email-body">
-      <p>Hey Jack,</p>
-      <p>I have sent you a few emails over the past week and a half. I built you a full marketing package with research, campaign angles, ad scripts, a VSL outline, and a live landing page.</p>
-      <p>Here is why I did it: I think you are sitting on a significant business opportunity that is currently under-monetized.</p>
-      <p>You have 1,000+ newsletter subscribers, 14K IG followers, a proven framework (the pitch pack), and the trust of a niche community. What I see missing is the funnel infrastructure and offer structure to turn that attention into consistent, scalable revenue.</p>
-      <p>That is exactly what I build. Full-stack marketing for coaches, creators, and info product owners. One person. One point of contact. I have built complete monetization systems for creators with massive audiences and generated $731K for a single client in 6 months.</p>
-      <p>Would you be open to a 15-minute call this week? No pitch. I will walk you through the gaps I found and what implementation could look like.</p>
-      <p><a href="https://calendly.com/ag-copy/call-with-andrei">https://calendly.com/ag-copy/call-with-andrei</a></p>
-      <p class="email-signoff">- Andrei</p>
-    </div>
-  </div>
-
-  <!-- EMAIL 6 -->
-  <div class="email-card reveal">
-    <div class="email-meta">
-      <span class="badge badge-day">Day 15</span>
-      <span class="badge badge-type">New Angle</span>
-    </div>
-    <div class="email-subject">Thought about this for your business</div>
-    <div class="email-body">
-      <p>Hey Jack,</p>
-      <p>I had another idea after building that package for you.</p>
-      <p>Your newsletter has 1,000+ filmmakers. Your 3 Day Pitch Pack is the entry product. But there is a massive gap between "free newsletter" and "buy the pitch pack."</p>
-      <p>What if you added a mid-tier offer? A structured 8-week program or small group intensive at $1,500-$3,000 that takes filmmakers through the complete system: finding high-ticket clients, building the pitch, structuring retainer deals, and positioning their brand.</p>
-      <p>The newsletter feeds the top of the funnel. The pitch pack is the entry point. The group program is where the real transformation (and revenue) happens.</p>
-      <p>I have seen this exact model work for coaches and creators across multiple niches. The implementation is where most people stall, and that is exactly what I handle.</p>
-      <p>Your package is still live: <a href="./">View Package</a></p>
-      <p class="email-signoff">- Andrei</p>
-    </div>
-  </div>
-
-  <!-- EMAIL 7 -->
-  <div class="email-card reveal">
-    <div class="email-meta">
-      <span class="badge badge-day">Day 19</span>
-      <span class="badge badge-type">Proof Point</span>
-    </div>
-    <div class="email-subject">$731K in 6 months with one client</div>
-    <div class="email-body">
-      <p>Hey Jack,</p>
-      <p>I worked with a client in the coaching space. Built their entire marketing infrastructure from scratch. VSL funnel, email sequences, landing pages, sales process, tech integrations. One operator. One marketing partner.</p>
-      <p>Result: $731,000 in revenue in 6 months.</p>
-      <p>No big agency. No team of 10. Just one person building and operating the entire marketing engine while the client focused on delivery.</p>
-      <p>That client had a strong product and a built-in audience. What they did not have was the systems to convert at scale. Same pattern I keep seeing.</p>
-      <p>Every situation is different. But the gap between "strong offer with no funnel" and "strong offer with a full marketing stack" is usually measured in multiples, not percentages.</p>
-      <p>Your package: <a href="./">View Package</a></p>
-      <p class="email-signoff">- Andrei</p>
-    </div>
-  </div>
-
-  <!-- EMAIL 8 -->
-  <div class="email-card reveal">
-    <div class="email-meta">
-      <span class="badge badge-day">Day 24</span>
-      <span class="badge badge-type">Re-engage</span>
-    </div>
-    <div class="email-subject">Did you see this?</div>
-    <div class="email-body">
-      <p>Hey Jack,</p>
-      <p>Quick check-in. I sent you a full marketing package a few weeks ago with research, ad scripts, a landing page, and a VSL outline built specifically for your filmmaker business.</p>
-      <p>Not sure if you had a chance to look at it. Either way, it is still live: <a href="./">View Package</a></p>
-      <p>If now is not the right time, no worries. Just did not want it to get buried.</p>
-      <p class="email-signoff">- Andrei</p>
-    </div>
-  </div>
-
-  <!-- EMAIL 9 -->
-  <div class="email-card reveal">
-    <div class="email-meta">
-      <span class="badge badge-day">Day 30</span>
-      <span class="badge badge-type">Soft Break-up</span>
-    </div>
-    <div class="email-subject">Last thing from me</div>
-    <div class="email-body">
-      <p>Hey Jack,</p>
-      <p>I have sent you a handful of emails over the past month. I built you a full marketing package. I shared specific gaps in your funnel. I shared results from similar clients.</p>
-      <p>Everything I built is yours regardless. The research, the ad scripts, the landing page, the campaign angles. Use them however you want.</p>
-      <p>If the timing is ever right to talk about building out the full marketing stack for your filmmaker business, funnels, email automation, offer structure, and paid traffic, I am here.</p>
-      <p><a href="https://calendly.com/ag-copy/call-with-andrei">https://calendly.com/ag-copy/call-with-andrei</a></p>
-      <p>No hard feelings if not. I respect your time.</p>
-      <p class="email-signoff">- Andrei</p>
-    </div>
-  </div>
-
-  <!-- EMAIL 10 -->
-  <div class="email-card reveal">
-    <div class="email-meta">
-      <span class="badge badge-day">Day 37</span>
-      <span class="badge badge-type">Final Close</span>
-    </div>
-    <div class="email-subject">Closing the loop</div>
-    <div class="email-body">
-      <p>Hey Jack,</p>
-      <p>This is my last email.</p>
-      <p>I wanted to show you what a full-stack marketing partner looks like in practice, not in theory. That is why I built the package instead of just sending a pitch deck.</p>
-      <p>The deliverables are still live: <a href="./">View Package</a></p>
-      <p>If the timing is ever right, you know where to find me. I respect your hustle and what you are building with PhotoBomb and the Blueprint newsletter. Not many filmmakers have the business sense to teach what they know at scale. You do. The infrastructure to monetize it is the missing piece.</p>
-      <p>All the best,<br>Andrei Givero<br>AG1 Consulting Ltd<br>info@andreicopy.net<br>@andre.g1</p>
-    </div>
-  </div>
-
+<div class="email-card reveal">
+<div class="email-meta"><span class="badge badge-day">Day 0</span><span class="badge badge-type">Welcome</span></div>
+<div class="email-subject">You just joined 1,000+ filmmakers</div>
+<div class="email-body">
+<p>Hey [FIRST NAME],</p>
+<p>Welcome to The Modern Filmmaker Blueprint.</p>
+<p>Every week, I share what I have learned about landing high-ticket clients, building a premium creative brand, and turning a camera into a real business. Not theory. Just what works.</p>
+<p>Here is the one thing I wish someone had told me when I was starting out:</p>
+<p>The reason most filmmakers undercharge is not their skill level. It is their positioning. Two filmmakers with the same gear and the same reel can walk into the same meeting and walk out with wildly different deals. The difference is how they present the value before the client sees a single frame.</p>
+<p>That is what this newsletter is about. Not how to shoot better. How to get paid better.</p>
+<p>More coming soon.</p>
+<p class="sig">Jack</p>
+</div>
 </div>
 
-<footer class="footer">
-  <p>2026 AG1 Consulting Ltd.</p>
-</footer>
+<div class="email-card reveal">
+<div class="email-meta"><span class="badge badge-day">Day 1</span><span class="badge badge-type">Quick Win</span></div>
+<div class="email-subject">Stop calling yourself a videographer</div>
+<div class="email-body">
+<p>Hey [FIRST NAME],</p>
+<p>Quick one today.</p>
+<p>The single biggest positioning mistake filmmakers make is calling themselves a "videographer" or "video editor" or "content creator." Those words tell the client you are a commodity. Someone they can find on Fiverr for $200.</p>
+<p>Instead, position yourself as a creative partner. A strategic visual partner. Someone who understands their brand and creates content that drives business results.</p>
+<p>The shift sounds small. It is not. When a client sees "videographer," they think cost. When they see "creative partner," they think investment.</p>
+<p>Update your bio. Update your proposals. Update how you introduce yourself on calls. Watch what happens.</p>
+<p class="sig">Jack</p>
+</div>
+</div>
 
+<div class="email-card reveal">
+<div class="email-meta"><span class="badge badge-day">Day 3</span><span class="badge badge-type">Framework</span></div>
+<div class="email-subject">The pitch changes everything</div>
+<div class="email-body">
+<p>Hey [FIRST NAME],</p>
+<p>The difference between a $500 gig and a $10K project is not the work. It is the pitch.</p>
+<p>Most filmmakers pitch by sending a price list. Maybe a PDF. Maybe a DM with their rate. The client compares it to every other quote they received. You lose on price because you made it about price.</p>
+<p>Premium filmmakers pitch differently. They frame the project as a business investment. They show the client what the content will DO for their brand, not just what it will LOOK like.</p>
+<p>I built a framework for this called the 3 Day Pitch Pack. It is a system for building pitches that communicate premium value before the client ever sees your reel. When the pitch is right, the price takes care of itself.</p>
+<p>More on this in the next email.</p>
+<p class="sig">Jack</p>
+</div>
+</div>
+
+<div class="email-card reveal">
+<div class="email-meta"><span class="badge badge-day">Day 5</span><span class="badge badge-type">Story</span></div>
+<div class="email-subject">How I stopped shooting everything for everyone</div>
+<div class="email-body">
+<p>Hey [FIRST NAME],</p>
+<p>When I started, I said yes to everything. Weddings, events, corporate videos, social media clips. Whatever paid. I was 17, traveling, and just wanted to shoot.</p>
+<p>The problem with saying yes to everything is that you become known for nothing. No one refers you because they cannot describe what you do.</p>
+<p>The turning point was when I started saying no. I picked a lane. I focused on a specific type of client and a specific type of work. I raised my prices. And the weird thing happened: I got more inquiries, not fewer.</p>
+<p>When you narrow down, you stand out. Clients do not want a generalist. They want someone who understands their specific world.</p>
+<p>That is how PhotoBomb Media started. Not by doing everything. By doing one thing really well for a specific type of client.</p>
+<p class="sig">Jack</p>
+</div>
+</div>
+
+<div class="email-card reveal">
+<div class="email-meta"><span class="badge badge-day">Day 7</span><span class="badge badge-type">Education</span></div>
+<div class="email-subject">The $500 vs $10K framework</div>
+<div class="email-body">
+<p>Hey [FIRST NAME],</p>
+<p>Two filmmakers walk into the same meeting. Same gear. Same reel quality. Same city.</p>
+<p>Filmmaker A sends a one-page quote. "$1,500 for a brand video. Includes filming, editing, and revisions." The client says "let me think about it" and ghosts.</p>
+<p>Filmmaker B sends a pitch deck. It opens with the client's business challenge. It shows how the video content will solve that challenge. It includes examples of similar work with measurable results. The price is $8,000. The client says "when can we start?"</p>
+<p>Same meeting. Same skill level. 5x the price. The difference is that Filmmaker A made it about the video. Filmmaker B made it about the outcome.</p>
+<p>Clients do not pay for video. They pay for what video does for their business. When you frame your pitch around outcomes, the price becomes irrelevant.</p>
+<p class="sig">Jack</p>
+</div>
+</div>
+
+<div class="email-card reveal">
+<div class="email-meta"><span class="badge badge-day">Day 10</span><span class="badge badge-type">Education</span></div>
+<div class="email-subject">How to stop starting from zero every month</div>
+<div class="email-body">
+<p>Hey [FIRST NAME],</p>
+<p>The freelance cycle is brutal. Finish a project. Get paid. Start from zero. Hunt for the next one. Repeat.</p>
+<p>There is a way out: retainer deals.</p>
+<p>Instead of selling one-off projects, you structure an ongoing relationship. The client pays monthly. You deliver a set amount of content. Both sides win.</p>
+<p>Here is how to pitch it: after your first project together, say this. "I loved working on this. Based on what I know about your brand now, I think we could do a lot more together. Would you be open to a monthly content partnership where I handle [X] for you on a recurring basis?"</p>
+<p>Most clients will at least listen. 3-4 retainer clients at $2K-$5K per month and you have a $10K-$20K/month business without chasing a single new lead.</p>
+<p class="sig">Jack</p>
+</div>
+</div>
+
+<div class="email-card reveal">
+<div class="email-meta"><span class="badge badge-day">Day 13</span><span class="badge badge-type">Mindset</span></div>
+<div class="email-subject">Your reel is not the problem</div>
+<div class="email-body">
+<p>Hey [FIRST NAME],</p>
+<p>I know what you are thinking. "If I just had a better reel, I would get better clients."</p>
+<p>I used to think the same thing. I would spend hours re-editing my portfolio, adding new projects, tweaking the color grade. I thought that would land the next big client.</p>
+<p>It never did.</p>
+<p>The filmmakers charging $10K+ per project do not necessarily have better reels. They have a system for finding, pitching, and closing premium clients. The reel is a tool in that system. It is not the system itself.</p>
+<p>If your reel is decent (and it probably is), the bottleneck is not your work. It is your client acquisition process.</p>
+<p>Fix the process. The reel will do its job once the right people are looking at it.</p>
+<p class="sig">Jack</p>
+</div>
+</div>
+
+<div class="email-card reveal">
+<div class="email-meta"><span class="badge badge-day">Day 16</span><span class="badge badge-type">Education</span></div>
+<div class="email-subject">Where premium clients actually hang out</div>
+<div class="email-body">
+<p>Hey [FIRST NAME],</p>
+<p>Most filmmakers look for clients in the wrong places. They post on social media hoping someone will reach out. They browse job boards. They wait for referrals.</p>
+<p>Premium clients are not on job boards. Here is where they actually are:</p>
+<p>Industry events and conferences. The people making buying decisions for brand content are at events. Show up. Network. Follow up.</p>
+<p>LinkedIn. Not with a generic "hey I do video" message. With a targeted pitch that references their specific business challenge.</p>
+<p>Through existing clients. Your best source of premium clients is other premium clients. Every project should end with: "Who else do you know who could benefit from this?"</p>
+<p>Local business communities. Chambers of commerce, startup meetups, co-working spaces. The businesses there need content and have budget.</p>
+<p>Stop waiting for clients to find you. Go where they are.</p>
+<p class="sig">Jack</p>
+</div>
+</div>
+
+<div class="email-card reveal">
+<div class="email-meta"><span class="badge badge-day">Day 20</span><span class="badge badge-type">Pitch</span></div>
+<div class="email-subject">Here is everything I teach</div>
+<div class="email-body">
+<p>Hey [FIRST NAME],</p>
+<p>Over the past few weeks, I have shared the core principles of the system I use to land high-ticket clients and build a premium creative business.</p>
+<p>Here is the full picture:</p>
+<p>1. Premium positioning. How to present yourself as a creative partner, not a commodity.</p>
+<p>2. The 3 Day Pitch Pack. The framework for building pitches that close $5K-$15K deals.</p>
+<p>3. Client acquisition. Where to find premium clients and how to get in front of them.</p>
+<p>4. Retainer structures. How to build recurring revenue so you stop starting from zero.</p>
+<p>5. Brand building. How to position your personal brand so clients come to you.</p>
+<p>If you want to go deeper, I work with filmmakers directly through coaching and intensive programs. Reply to this email and tell me where you are right now and where you want to be. I read every response.</p>
+<p class="sig">Jack</p>
+</div>
+</div>
+
+<div class="email-card reveal">
+<div class="email-meta"><span class="badge badge-day">Day 25</span><span class="badge badge-type">Final</span></div>
+<div class="email-subject">Last automated email. Here is what comes next.</div>
+<div class="email-body">
+<p>Hey [FIRST NAME],</p>
+<p>This is the last email in the welcome sequence. From here, you will get The Modern Filmmaker Blueprint newsletter every week with fresh insights, strategies, and case studies.</p>
+<p>Everything I shared is yours. The positioning framework. The pitch concept. The retainer strategy. Use it.</p>
+<p>If you are serious about building a premium creative business, there are two ways to work with me:</p>
+<p>1. The 3 Day Pitch Pack. A self-guided framework for building pitches that land high-ticket clients. [LINK]</p>
+<p>2. Direct coaching. We work together 1-on-1 to build your complete client acquisition system. Reply to this email if you are interested.</p>
+<p>If the timing is not right, no stress. Keep reading the weekly newsletter. And when you are ready, I am here.</p>
+<p>Talk soon.</p>
+<p class="sig">Jack</p>
+</div>
+</div>
+
+</div>
+<footer>2026 AG1 Consulting Ltd.</footer>
 <script>
-const observer=new IntersectionObserver((entries)=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}
-  });
-},{threshold:0.1});
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+const observer = new IntersectionObserver(entries => {
+entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)} });
+},{threshold:0.1,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
-
 </body>
 </html>
